@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="res_partner_view_form_patient_management" model="ir.ui.view">
+        <field name="name">res.partner.view.form.patient.management</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//notebook" position="inside">
+                <page name="patient_management" string="Ficha paciente">
+                    <group>
+                        <group name="patient_identification" string="Identificación">
+                            <field name="numero_paciente"/>
+                            <field name="baja"/>
+                            <field name="dni_titular_factura"/>
+                            <field name="datos_tutor"/>
+                            <field name="numero_cuenta"/>
+                        </group>
+                        <group name="patient_treatment" string="Tratamiento">
+                            <field name="servicio"/>
+                            <field name="tipo_asistencia"/>
+                            <field name="fecha_inicio_tratamiento"/>
+                            <field name="fecha_fin_tratamiento"/>
+                        </group>
+                    </group>
+                    <group>
+                        <field name="precio_forma_pago"/>
+                        <field name="observaciones_paciente"/>
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="res_partner_view_search_patient_management" model="ir.ui.view">
+        <field name="name">res.partner.view.search.patient.management</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_res_partner_filter"/>
+        <field name="arch" type="xml">
+            <xpath expr="//filter[@name='inactive']" position="before">
+                <filter string="Baja" name="patient_baja" domain="[('baja', '=', True)]"/>
+                <separator/>
+            </xpath>
+            <xpath expr="//group[@name='group_by']" position="inside">
+                <filter string="Servicio" name="group_by_servicio" context="{'group_by': 'servicio'}"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>
