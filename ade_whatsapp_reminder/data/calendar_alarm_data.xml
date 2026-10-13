@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo noupdate="1">
+    <!-- Antelaciones provisionales: editar "duration" / "interval" desde
+         Calendario > Configuración > Alarmas (o en esta data). -->
+    <record id="alarm_whatsapp_24h" model="calendar.alarm">
+        <field name="name">WhatsApp 24 horas antes</field>
+        <field name="alarm_type">whatsapp</field>
+        <field name="duration">24</field>
+        <field name="interval">hours</field>
+        <field name="wa_template_id" ref="whatsapp_template_cita_recordatorio"/>
+        <field name="default_for_new_events" eval="True"/>
+    </record>
+    <record id="alarm_whatsapp_2h" model="calendar.alarm">
+        <field name="name">WhatsApp 2 horas antes</field>
+        <field name="alarm_type">whatsapp</field>
+        <field name="duration">2</field>
+        <field name="interval">hours</field>
+        <field name="wa_template_id" ref="whatsapp_template_cita_recordatorio"/>
+    </record>
+</odoo>
