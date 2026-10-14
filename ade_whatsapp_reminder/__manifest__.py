@@ -1,7 +1,7 @@
 {
     "name": "Ade WhatsApp Reminder",
     "summary": "Recordatorio por WhatsApp de las citas del calendario.",
-    "version": "19.0.1.0.0",
+    "version": "19.0.1.1.0",
     "category": "Calendar",
     "author": "Manuel Calero, Xtendoo",
     "license": "LGPL-3",

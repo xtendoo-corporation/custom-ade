@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo noupdate="1">
-    <!-- Texto provisional. Hay que enviarlo a aprobación de Meta antes de usarlo. -->
+    <!-- Hay que enviarlo a aprobación de Meta antes de usarlo. -->
     <record id="whatsapp_template_cita_recordatorio" model="whatsapp.template">
         <field name="name">Recordatorio de cita</field>
         <field name="template_name">recordatorio_cita</field>
@@ -8,6 +8,16 @@
         <field name="template_type">utility</field>
         <field name="model_id" ref="calendar.model_calendar_attendee"/>
         <field name="phone_field">partner_id.phone</field>
-        <field name="body">Hola, le recordamos que tiene una cita próximamente con nosotros. Si no puede asistir, por favor avísenos. ¡Gracias!</field>
+        <field name="body">Desde Ade Intervención le recordamos la próxima cita en nuestro centro el *{{1}}*. Rogamos confirmación, gracias</field>
+        <field name="variable_ids" eval="[
+            (5, 0, 0),
+            (0, 0, {
+                'name': '{{1}}',
+                'demo_value': 'Lunes 28 de septiembre a las 18:00 h',
+                'line_type': 'body',
+                'field_type': 'field',
+                'field_name': 'ade_cita_texto',
+            }),
+        ]"/>
     </record>
 </odoo>
