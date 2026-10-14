@@ -3,7 +3,7 @@
     "summary": "Adds patient record fields to res.partner for Ade Fundation.",
     "version": "19.0.1.0.0",
     "category": "Contact",
-    "author": "Manuel Calero, Xtendoo",
+    "author": "Dani Domínguez, Xtendoo",
     "license": "LGPL-3",
     "depends": [
         "base",
