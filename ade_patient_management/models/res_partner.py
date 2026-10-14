@@ -1,4 +1,4 @@
-# Copyright (C) 2026 Manuel Calero (<https://xtendoo.es>).
+# Copyright (C) 2026 Dani Domínguez (<https://xtendoo.es>).
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
 from odoo import fields, models
 
