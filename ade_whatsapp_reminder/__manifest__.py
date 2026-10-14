@@ -12,8 +12,8 @@
         - Alarmas de WhatsApp 24 horas y 2 horas antes
         - Alarma por defecto en las citas nuevas, también las sincronizadas desde Google
     """,
-    'author': 'Manuel Calero, Xtendoo',
-    'website': 'https://www.xtendoo.com',
+    'author': 'Dani Domínguez, Xtendoo',
+    'website': 'https://www.xtendoo.es',
     'license': 'LGPL-3',
     'depends': [
         'calendar',
